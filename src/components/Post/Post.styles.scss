@@ -1,0 +1,15 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--clr-light-gray);
+  padding: 1rem;
+
+  &__title {
+    font-size: 1.5rem;
+    color: var(--clr-light);
+  }
+
+  &__body {
+    color: var(--clr-light-gray);
+  }
+}
