@@ -35,13 +35,13 @@ export default function Home() {
 
   return (
     <main>
-      <section>
+      <section className="container">
         <h2>Users</h2>
         <div className="grid">
           {userCards}
         </div>
       </section>
-      <section>
+      <section className="container">
         <h2>Posts</h2>
         <div className="grid">
           {postCards}
