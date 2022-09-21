@@ -22,7 +22,8 @@
     bottom: 50%;
     width: var(--width);
     transform: translateY(calc(var(--size) * -0.075));
-    animation: animate-top-bar-reversed 400ms linear forwards;
+    animation: animate-top-bar-reversed linear forwards;
+    animation-duration: var(--duration, 0ms);
 
   }
 
@@ -31,10 +32,11 @@
     top: 50%;
     width: var(--width);
     transform: translateY(calc(var(--size) * 0.075));
-    animation: animate-bottom-bar-reversed 400ms linear forwards;
+    animation: animate-bottom-bar-reversed linear forwards;
+    animation-duration: var(--duration, 0ms);
   }
 
-  &:hover {
+  &.active {
     &::before {
       animation: animate-top-bar 400ms linear forwards;
     }
