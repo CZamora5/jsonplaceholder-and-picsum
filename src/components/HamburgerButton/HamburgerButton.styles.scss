@@ -1,0 +1,155 @@
+.hamburger {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border: none;
+  border-radius: calc(var(--size) * 0.1);
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: var(--clr-accent);
+    height: calc(var(--size) * 0.15);
+  }
+
+  &::before {
+    --width: calc(var(--size) * 0.8);
+    bottom: 50%;
+    width: var(--width);
+    transform: translateY(calc(var(--size) * -0.075));
+    animation: animate-top-bar-reversed 400ms linear forwards;
+
+  }
+
+  &::after {
+    --width: calc(var(--size) * 0.64);
+    top: 50%;
+    width: var(--width);
+    transform: translateY(calc(var(--size) * 0.075));
+    animation: animate-bottom-bar-reversed 400ms linear forwards;
+  }
+
+  &:hover {
+    &::before {
+      animation: animate-top-bar 400ms linear forwards;
+    }
+
+    &::after {
+      animation: animate-bottom-bar 400ms linear forwards;
+    }
+  }
+
+  @keyframes animate-top-bar {
+    0% {
+      transform: translateY(calc(var(--size) * -0.075));
+    }
+
+    25% {
+      width: calc(var(--size) * 0.5);
+      right: calc(var(--size) * 0.25);
+      transform: translateY(calc(var(--size) * -0.075));
+    }
+
+    50% {
+      transform: translateY(50%);
+    }
+
+    75% {
+      transform: translateY(50%);
+    }
+
+    100% {
+      width: calc(var(--size) * 0.5);
+      right: calc(var(--size) * 0.25);
+      transform: translateY(50%) rotate(45deg);
+    }
+  }
+
+  @keyframes animate-top-bar-reversed {
+    0% {
+      width: calc(var(--size) * 0.5);
+      right: calc(var(--size) * 0.25);
+      transform: translateY(50%) rotate(45deg);
+    }
+
+    25% {
+      transform: translateY(50%);
+    }
+
+
+    50% {
+      transform: translateY(50%);
+    }
+
+    75% {
+      width: calc(var(--size) * 0.5);
+      right: calc(var(--size) * 0.25);
+      transform: translateY(calc(var(--size) * -0.075));
+    }
+
+    100% {
+      transform: translateY(calc(var(--size) * -0.075));
+      width: var(--width);
+      right: 0;
+    }
+  }
+
+  @keyframes animate-bottom-bar {
+    0% {
+      transform: translateY(calc(var(--size) * 0.075));
+    }
+
+    25% {
+      transform: translateY(calc(var(--size) * 0.075));
+      width: calc(var(--size) * 0.5);
+      right: calc(var(--size) * 0.25);
+    }
+
+    50% {
+      transform: translateY(-50%);
+    }
+
+    75% {
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    100% {
+      right: calc(var(--size) * 0.25);
+      transform: translateY(-50%) rotate(135deg);
+      width: calc(var(--size) * 0.5);
+    }
+  }
+
+  @keyframes animate-bottom-bar-reversed {
+    0% {
+      right: calc(var(--size) * 0.25);
+      transform: translateY(-50%) rotate(135deg);
+      width: calc(var(--size) * 0.5);
+    }
+
+    25% {
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    50% {
+      transform: translateY(-50%);
+    }
+
+    75% {
+      transform: translateY(calc(var(--size) * 0.075));
+      width: calc(var(--size) * 0.5);
+      right: calc(var(--size) * 0.25);
+    }
+
+    100% {
+      transform: translateY(calc(var(--size) * 0.075));
+      width: var(--width);
+      right: 0;
+    }
+  }
+}
