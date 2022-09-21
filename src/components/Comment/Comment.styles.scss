@@ -1,23 +1,15 @@
 .comment {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--clr-light-gray);
+  border: 1px solid var(--clr-gray);
   padding: 1rem;
 
   &__user {
     font-size: 1.5rem;
-    color: var(--clr-light);
-
-    &__name {
-      color: var(--clr-light-gray);
-    }
-    
-    &__email {
-      color: var(--clr-light-gray);
-    }
+    color: var(--clr-light-dark);
   }
   
   &__body {
-    color: var(--clr-light-gray);
+    color: var(--clr-light-dark);
   }
 }

@@ -1,15 +1,25 @@
 :root {
-  --clr-primary: #111827;
-  --clr-accent: #EC4899;
-  --clr-light-gray: #b0b4bd;
-  --clr-light: #f1f3f7;
+  --clr-dark: #2c2519;
+  --clr-light-dark: #535961;
+  --clr-medium-dark: #4C6085;
+  --clr-gray: #f8eeee;
+  --clr-accent-light: #ff7070;
+  --clr-accent: #b39dc0;
+  --clr-light: #f7f7f7;
 
   --font-family: "Inter", sans-serif;
-  --fs-light: 300;
-  --fs-regular: 400;
-  --fs-medium: 500;
-  --fs-bold: 700;
-  --fs-black: 900;
+  
+  --fs-small: 0.75rem;
+  --fs-regular: 0.875rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.25rem;
+  --fs-xlarge: 1.5rem;
+  
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
 }
 
 html {
@@ -77,9 +87,16 @@ p {
 
 body {
   font-family: var(--font-family);
-  font-size: var(--fs-regular);
-  background-color: var(--clr-primary);
-  color: var(--clr-light-gray);
+  font-size: var(--fw-regular);
+  background-color: var(--clr-light);
+  color: var(--clr-medium-dark);
+}
+
+input,
+button,
+select,
+a {
+  font-family: var(--font-family);
 }
 
 .container {
